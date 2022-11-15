@@ -2,14 +2,14 @@
 
 **Introdução a Python - Módulo C**
 
-![](.\Imagens\img-1.jpg)
+![](./Imagens/img-1.jpg)
 
 **Tkinter!**
 
 **Josué Labaki
 labakiturbo@gmail.com**
 
-![](.\Imagens\image2.png)
+![](./Imagens/image2.png)
 
 # Apresentação
 
@@ -49,7 +49,7 @@ Há também os **event handlers** (“tratadores de eventos” ), que são proce
 
 Veja na figura uma aplicação de Tkinter famosa, o IDLE. Ele se comporta como se seu programador tivesse escrito um event handler que faz o menu File (um widget) ficar saltado e tivesse ligado[^1] o evento “Parar o mouse sobre o menu file” a este event handler. Quando o evento acontece (quando alguém pára o mouse sobre esse widget), o event handler se aciona e o menu fica saltado. Na verdade, não é necessário fazer este tipo de atribuição com o widget Menu. Ele fica saltado automaticamente.
 
-![](.\Imagens\img-5.png)
+![](./Imagens/img-5.png)
 
 ## 2. A classe Tk
 
@@ -87,7 +87,7 @@ Widgets seguem a mesma sintaxe: o primeiro argumento no instante da sua definiç
 
 O elemento máximo da hierarquia é a própria janela top-level, aquela que vem com os botões de fechar, barra de título, etc. Veja um esquema hierárquico:
 
-![](.\Imagens\img-6.png)
+![](./Imagens/img-6.png)
 
 Após a definição de um contêiner ou widget, precisamos usar um gerenciador de geometria para indicar em que posição ele aparecerá dentro do seu mestre. Tkinter oferece três: *grid*, *pack* e *place*. Neste tutorial usaremos o *pack*, e bem no final falaremos sobre *grid*, mas você pode descobrir o gerenciador *place* consultando os livros recomendados ao final deste Módulo. Se nenhum gerenciador de geometria for aplicado ao widget, ele existirá, mas não será visível ao usuário! Neste caso o widget é chamado de *virtual* e serve, por exemplo, para criar uma GUI invisível que mesmo assim permitisse a atribuição de um evento a um procedimento.
 
@@ -113,7 +113,7 @@ raiz.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-06.png)
+![](./Imagens/img-06.png)
 
 Além desta janela, deve ter aparecido também uma janela preta do script de Python. Caso você não queira que ela seja visível, basta salvar seu arquivo com extensão *pyw*.
 
@@ -162,7 +162,7 @@ raiz.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-7.png)
+![](./Imagens/img-7.png)
 
 Veja como o frame ajusta seu tamanho automaticamente para comportar os dois botões. Observe a fonte do botão verde, Verdana tamanho 12 em itálico e negrito (bold), e a fonte do botão vermelho, Times New Roman tamanho 16. O botão verde possui agora três linhas de altura enquanto o vermelho têm 12 letras de largura, além do seu texto ser amarelo, como foi configurado através da opção “fg”. Antes de prosseguirmos, faça seus próprios testes com as seis opções que aprendemos até agora. Crie vários botões com várias cores, fontes e tamanhos. Será bom que você tenha traquejo nestas configurações, porque elas são muito usadas.
 
@@ -174,7 +174,7 @@ Imagine que um frame seja uma cavidade onde encaixamos os widgets. O método pac
 
 Assim que um widget é posicionado, o espaço restante passa a ser a nova cavidade onde o próximo widget será posicionado, quando aplicarmos sobre ele o método pack. Não é tão simples observar isso porque o frame se encolhe sobre o primeiro widget, então o “espaço restante” é simplesmente imaginário. Quem sabe a figura a seguir não esclareça um pouco a questão?
 
-![](.\Imagens\img-8.png)
+![](./Imagens/img-8.png)
 
 O valor padrão do argumento side é TOP. Por isso, quando aplicamos o método pack sobre os botões do exemplo anterior, o botão “Oi!” se posiciona no topo da cavidade, e o botão “Tchau!” se posiciona no topo da cavidade restante, isto é, abaixo do primeiro botão. Nunca aplique diferentes posicionamentos de widgets no mesmo frame! O efeito pode ser desastroso principalmente quando o usuário resolver redimensionar a janela (clicando no botão de maximizar, por exemplo). Em vez disso, crie vários frames, como no exemplo a seguir. Dentro de cada um deles, só um valor é aplicado à opção side, e mesmo assim conseguimos colocar os botões em posições variadas na GUI.
 
@@ -207,7 +207,7 @@ raiz.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-9.png)
+![](./Imagens/img-9.png)
 
 Criamos três frames, como você pôde ver. Aplicamos pack(side=TOP) sobre os três, então eles estão empilhados um sobre os outros. Como o valor padrão do argumento *side* é TOP, não precisávamos passar isso explicitamente. Novamente usando pack(side=TOP), criamos um botão posicionado no primeiro frame, que se dispõe no topo da sua cavidade. Dois outros botões são criados e posicionados no segundo frame, mas desta vez com a opção pack(side=LEFT). É por isso que o botão “B2” se posiciona à esquerda no frame e o botão “B3” se posiciona à esquerda da cavidade restante.
 
@@ -217,7 +217,7 @@ Experimente! Crie vários botões e frames, e coloque-os em disposições difere
 
 ✎ *Há várias formas de alteração que você pode fazer no exemplo anterior de forma a deixa-lo como a figura a seguir. Eu consigo fazer isso alterando apenas dois caracteres! E você?*
 
-![](.\Imagens\img-10.png)
+![](./Imagens/img-10.png)
 
 # Parte III — Binding
 
@@ -271,7 +271,7 @@ raiz.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-11.png)
+![](./Imagens/img-11.png)
 
 Um clique no botão verde chama o método *muda_cor* e a cor de fundo do botão muda para amarelo. Outro clique traz de volta a cor original.
 
@@ -314,7 +314,7 @@ Há uns modificadores de evento importantes. Podemos usar os modificadores *Doub
 
 Vejamos um exemplo com tudo o que acabamos de falar. Agora aprenderemos ainda três novas opções de configuração dos botões, *relief, padx e pady. Relief* serve para mudar o relevo do botão. Os valores-padrão a que estamos acostumados são SUNKEN quando o botão é pressionado e RAISED, caso contrário. Experimente os outros valores GROOVE, RIDGE e FLAT. Já *padx* e *pady* são os espaços extras que damos entre as bordas de widgets como *Button* e *Label* e o texto contido neles, veja:
 
-![](.\Imagens\img-12.png)
+![](./Imagens/img-12.png)
 
 Vamos ao código... A primeira linha é adicionada para que a gente possa usar caracteres especiais, como acentos, ao longo do programa. Não deixe passar despercebido o *pack-unpack* que usamos para agilizar a determinação das características dos botões.
 
@@ -373,7 +373,7 @@ raiz.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-13.png)
+![](./Imagens/img-13.png)
 
 Ao definirmos o label *msg*, aplicamos sobre ele o *focus_force*. Por isso, quando o programa é iniciado, o foco é imediatamente passado para este widget. Você pode verificar que pressionar ENTER neste instante não chama event handler algum. Ao pressionarmos TAB, o foco é então passado para o widget definido logo após *msg*, que é o Botão 1. Você poderia ver isto pelo retângulo que circundaria o texto do botão. Agora sim, como relacionamos o pressionamento de ENTER sobre o Botão 1 ao event handler *keypress01*, este método será chamado, alterando o label *msg*.
 
@@ -439,7 +439,7 @@ instancia.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-14.png)
+![](./Imagens/img-14.png)
 
 O botão da esquerda chama um event handler da forma que já conhecíamos. Clique nele sem soltar o botão do mouse e você verá que o texto do botão central já é modificado. Solte o botão do mouse e os textos mudarão novamente. O mesmo não acontece com o botão da direita. Clique nele sem soltar e você verá que nada acontece até que o botão do mouse seja solto.
 
@@ -505,7 +505,7 @@ instancia.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-15.png)
+![](./Imagens/img-15.png)
 
 *✎ Responda rápido: o que digitei no campo de senha no caso acima?*
 
@@ -535,7 +535,7 @@ instancia.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-16.png)
+![](./Imagens/img-16.png)
 
 O espaço cinza que separa os cânvases e dá uma folga entre eles e a borda da janela é devido à opção *bd* que utilizamos.
 
@@ -547,11 +547,11 @@ Tragicamente, o sistema de coordenadas do Canvas não é igual ao cartesiano.
 
 Isso torna um pouco trabalhoso desenhar a maioria das figuras.
 
-![](.\Imagens\img-17.png)
+![](./Imagens/img-17.png)
 
 Costumo usar um recurso para contornar este problema. Ao definir um par contendo as coordenadas x e y de um desenho, lembre-se de que o par **(x, yc)** em coordenadas cartesianas corresponde a **(x, altura - yc)** em coordenadas do Canvas, sendo altura a altura do canvas. Difícil? Veja o exemplo:
 
-![](.\Imagens\img-18.png)
+![](./Imagens/img-18.png)
 
 A altura desse canvas é **100**. As coordenadas cartesianas do ponto **P** são (10, 90). Assim, a conversão para coordenadas do Canvas ficará (10, **100** - 90) = (10, 10).
 
@@ -640,7 +640,7 @@ Podemos adicionar textos aos canvas de uma maneira bem simples. Sintaxe:
 
 O texto, definido pela opção *text*, será posicionado em (x,y). Imagine que o texto a ser mostrado esteja contido num retângulo, como na figura abaixo.
 
-![](.\Imagens\img-19.png)
+![](./Imagens/img-19.png)
 
 Através da opção *anchor*, podemos especificar qual destes pontos do retângulo está sobre a coordenada (x,y) que informamos. Digamos que anchor=SW e definimos a posição do texto em (100, 100). Assim, a borda esquerda inferior do texto ficará em (100, 100). O valor padrão de *anchor* é CENTER.
 
@@ -650,7 +650,7 @@ A menos que seja definido um valor para a opção *width*, o texto será escrito
 
 No próximo exemplo usamos a técnica de conversão cartesinana-canvas. Precisamos desenhar um pentágono usando *create_polygon* e nos pareceu maçante ter que pensar nas coordenadas das cinco pontas em termos do Canvas. Melhor projetar o pentágono como estamos acostumados e depois converter os valores. Veja o projeto em coordenadas cartesianas:
 
-![](.\Imagens\img-20.png)
+![](./Imagens/img-20.png)
 
 Este pentágono será desenhado num canvas de altura 200. Dessa forma, a coordenada (100, 10) terá que ser implementada como (100, 200-10) = (100, 190), e assim por diante. Claro que não fizemos todas estas continhas para cada par ordenado; simplesmente salvamos a altura 200 sob o nome *altura* e simplesmente escrevemos nossas coordenadas cartesianas como (100, *altura* – 10), por exemplo.
 
@@ -687,7 +687,7 @@ instancia.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-21.png)
+![](./Imagens/img-21.png)
 
 Já vou avisando que não sou são-paulino! Simplesmente o logotipo me pareceu fácil de desenhar. Aliás, acho que um torcedor de verdade não desenharia seu logotipo do coração tão desproporcional...
 
@@ -697,7 +697,7 @@ Note que definimos as coordenadas do texto “SPFC” como sendo o centro do ret
 
 Quando usamos o método *create_oval* para desenhar elipses, trabalhamos com os mesmos conceitos de *create_rectangle*. Desta vez, forneceremos as coordenadas de vértices opostos de um retângulo imaginário, dentro do qual ficará a elipse desejada, como mostra a figura seguinte.
 
-![](.\Imagens\img-22.png)
+![](./Imagens/img-22.png)
 
 Podemos fornecer as coordenadas de dois vértices quaisquer do retângulo, desde que eles sejam opostos.
 
@@ -705,17 +705,17 @@ Usa-se o mesmo recurso para desenhar círculos; a diferença é que neste caso o
 
 O desenho de arcos acontece de forma semelhante. As coordenadas dos vértices do retângulo que conterão o arco devem ser informadas, mas são as opções de configuração que vão determinar a aparência do arco. Considere o centro do retângulo como o centro de curvatura do arco:
 
-![](.\Imagens\img-23.png)
+![](./Imagens/img-23.png)
 
 Por meio da opção *start*, dada em graus a partir do eixo x positivo e em sentido anti-horário, determinamos qual a linha a partir da qual o arco começa a ser desenhado. Exemplo: na figura acima, faríamos start=60.
 
 A outra opção fundamental é *extent*, dada em graus a partir da linha de início e em sentido anti-horário, para determinar até que linha o arco será desenhado. Veja na próxima figura o exemplo usando *extent*=90 e o arco já desenhado.
 
-![](.\Imagens\img-24.png)
+![](./Imagens/img-24.png)
 
 Por último, há a opção *style* para determinar o estilo do arco. Os valores podem ser ARC, CHORD e PIESLICE (o padrão).
 
-![](.\Imagens\img-25.png)
+![](./Imagens/img-25.png)
 
 O exemplo seguinte é um programinha para crianças aprenderem porcentagens com tortas. Estamos acostumados a salvar o valor da altura do canvas num nome para facilitar nosso senso de coordenadas. Como este valor também é usado dentro de um event handler, melhor transformar esta altura num atributo da instância por meio de *self.altura*. Não deixe de notar também:
 
@@ -762,7 +762,7 @@ instancia.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-26.png)
+![](./Imagens/img-26.png)
 
 Na figura acima vemos o programa mostrando uma fatia de 56% da torta. Veja como as letras são grandes e coloridas – tudo direcionado ao público infantil que usaria esta GUI.
 
@@ -772,7 +772,7 @@ Na figura acima vemos o programa mostrando uma fatia de 56% da torta. Veja como 
 
 Assim que um objeto é criado num canvas, recebe automaticamente um ID – um número inteiro para diferencia-lo dos demais. O *n*-ésimo objeto desenhado tem ID *n*. Quando se insere um objeto num canvas, ele se dispõe *sobre* os desenhados anteriormente. Assim, os menores IDs pertencem aos objetos que estão mais próximo do fundo do canvas (o “background”):
 
-![](.\Imagens\img-27.png)
+![](./Imagens/img-27.png)
 
 O canvas oferece dois métodos muito importantes para gerenciar seus objetos: *find_all()*, que retorna uma tupla com o ID de todos os objetos e *delete*(X1, X2, ...., Xn) que apaga do canvas os objetos de ID *X1, X2, ..., Xn*. Este último método é capaz de receber os IDs em forma de strings de inteiros, isto é, “1”, “2”, etc.
 
@@ -831,7 +831,7 @@ instancia.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-28.png)
+![](./Imagens/img-28.png)
 
 Quando perguntamos a hora, é necessário que o event handler correspondente apague o valor mostrado, senão os textos ficariam sobrepostos. Por isso, demos um nome (uma tag) aos textos correspondentes às horas e aos minutos. Dessa forma, somos capazes de apagar somente estes dois objetos, sem ter que redesenhar todo o rádio-relógio, que é composto de vários polígonos, retângulos e um texto que mostra os dois pontos entre as horas e os minutos (em amarelo na GUI).
 
@@ -880,7 +880,7 @@ instancia.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-29.png)
+![](./Imagens/img-29.png)
 
 A opção *highlightthickness* pode ser aplicada a qualquer widget e serve para determinar a espessura da linha daquele retângulo que mostra que o widget está em foco. Neste canvas, dizemos que a espessura dessa linha é zero para evitar que a sua cor padrão (preto) estragasse a aparência da GUI. Embora o retângulo não apareça, o canvas aqui está sempre em foco.
 
@@ -927,7 +927,7 @@ inst2.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-30.png)
+![](./Imagens/img-30.png)
 
 Repare: quando ordenamos que a janela não seja redimensionável para lado nenhum, o botão maximizar da barra de título sequer aparece! Por outro lado, quando clicamos no botão maximizar da outra janela, ela assume imediatamente o tamanho máximo permitido, 300 por 300.
 
@@ -988,7 +988,7 @@ inst.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-31.png)
+![](./Imagens/img-31.png)
 
 Se você gostou desse amarelo meio esverdeado com um toque (pequeno) de azul e quer coloca-lo como cor de fundo de um botão, é só fazer *bg = “#fded62”*.
 
@@ -1037,7 +1037,7 @@ inst.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-32.png)
+![](./Imagens/img-32.png)
 
 Em particular, o Canvas possui um método para determinar que objeto está mais próximo de onde houve um clique. O método é o *find_closest*, cujos argumentos são as coordenadas (x,y) e o valor retornado é o ID do objeto mais próximo de (x,y).
 
@@ -1078,7 +1078,7 @@ inst.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-33.png)
+![](./Imagens/img-33.png)
 
 Novamente, é necessário um tratamento de erros adequado. Veja que mais de 26 cliques em qualquer dos círculos pequenos resulta um erro, porque exige intensidades inexistentes da cor em questão, maiores que 255.
 
@@ -1090,21 +1090,21 @@ Quando uma GUI contém muitos widgets e eles devem ficar alinhados verticalmente
 
 Este gerenciador funciona pela definição de células imaginárias no contêiner. Pelos argumentos *row* (linha) e *column* (coluna), determinamos em qual destas células o widgets estará disposto. Por exemplo, a aplicação de *w1.grid(column=1, row=1)* e *w2.grid(column=1, row=2)* cria imediatamente duas linhas. O widget w1 ficará na primeira linha e w2 ficará na segunda.
 
-![](.\Imagens\img-34.png)
+![](./Imagens/img-34.png)
 
 Criemos um terceiro widget que compartilhará a mesma linha de w2. Para isto, é necessária a criação de mais uma coluna: *w3.grid(column=2, row=2)*. O widget w3 ficará na linha 2, coluna 2.
 
-![](.\Imagens\img-35.png)
+![](./Imagens/img-35.png)
 
 Aqui ficou feio porque *w1* só ocupa a célula onde foi definido. Para fazer com que ele ocupe também a segunda coluna, usamos o argumento *columnspan*, que determina quantas colunas ele deve ocupar. Se usássemos columnspan=2, a disposição dos widgets seria essa:
 
-![](.\Imagens\img-36.png)
+![](./Imagens/img-36.png)
 
 Argumento semelhante, *rowspan*, pode ser usado para dizer que um widget deve ocupar várias linhas da sua coluna.
 
 Quando definimos as células em que um widget deverá se instalar, admite-se que seu centro esteja no centro deste espaço. Com a opção *sticky* podemos instala-lo nas diferentes posições mostradas na figura abaixo.
 
-![](.\Imagens\img-37.png)
+![](./Imagens/img-37.png)
 
 Finalmente, a disposição de vários widgets na tela não deixa espaços entre eles. Para dar uma folga horizontal entre um widget e os que estiverem à sua esquerda ou direita, use a opção *padx*. A opção *pady* determina a folga vertical.
 
@@ -1157,7 +1157,7 @@ inst1.mainloop()
 
 **Resultado:**
 
-![](.\Imagens\img-38.png)
+![](./Imagens/img-38.png)
 
 *✎	E agora? Qual foi a senha que digitei? Você consegue descobri-la facilmente olhando o código.*
 
@@ -1179,7 +1179,7 @@ As infinitas soluções dos exercícios deste Módulo C a que você, leitor, pod
 
 👉	Melhore o programa de ensino de porcentagem através de tortas para que o usuário clique num botão e a fatia desenhada seja “retirada” da torta, como na figura a seguir.
 
-![](.\Imagens\img-39.png)
+![](./Imagens/img-39.png)
 
 Reescreva também os trechos necessários para que o usuário não tenha que abrir outra janela sempre que quiser entrar uma porcentagem diferente.
 
@@ -1210,6 +1210,6 @@ Finalmente, cabe um pequeno comentário quanto às capas dos Módulos deste guia
 ***J. Labaki***
 [*labakiturbo@gmail.com*](mailto:labakiturbo@gmail.com)
 [*http://labaki.tk*](http://labaki.tk/)
-![](.\Imagens\img-40.jpg)
+![](./Imagens/img-40.jpg)
 
 **Este documento pode ser distribuído livremente, desde que mantidos os créditos do autor.**

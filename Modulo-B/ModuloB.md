@@ -8,7 +8,7 @@
 
 **Josué Labaki    <labakiturbo@gmail.com> E. R. Woiski    <woiski@dem.feis.unesp.br>**
 
-![](..\Modulo-C\Imagens\image2.png)
+![](../Modulo-C/Imagens/image2.png)
 
 # Apresentação
 

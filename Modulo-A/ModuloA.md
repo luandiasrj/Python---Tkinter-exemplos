@@ -6,7 +6,7 @@
 **Josué Labaki**
 [**labaki**___turbo___**@gmail.com.**](mailto:labakiturbo@gmail.com)
 
-![](..\Modulo-C\Imagens\image2.png)
+![](../Modulo-C/Imagens/image2.png)
 
 # Apresentação
 
