@@ -8,11 +8,15 @@ https://www.facom.ufu.br/~wendelmelo/terceiros/
 
 O guia completo foi originalmente escrito por Josué Labaki, com contribuições de outros membros do grupo Python Brasil em três partes:
 
-* [*Modulo A*](Modulo-A/ModuloA.md) — Bem-vindo a Python!
+* [*Modulo A*](Modulo-A/) — Bem-vindo a Python!
+
 Originamente em: https://www.facom.ufu.br/~wendelmelo/terceiros/ModuloA.pdf
-* [*Modulo B*](Modulo-B/ModuloB.md) — Python Orientado a Objetos
+
+* [*Modulo B*](Modulo-B/) — Python Orientado a Objetos
+
 Originamente em: https://www.facom.ufu.br/~wendelmelo/terceiros/ModuloB.pdf
-* [*Modulo C*](Modulo-C/ModuloC.md) — Tkinter
+
+* [*Modulo C*](Modulo-C/) — Tkinter
 Originamente em: https://www.facom.ufu.br/~wendelmelo/terceiros/ModuloC.pdf
 
 Devida a descontinuidade do sítio ‘web’ do grupo Python Brasil, o material foi disponibilizado no GitHub para poder ser acessado por todos.
