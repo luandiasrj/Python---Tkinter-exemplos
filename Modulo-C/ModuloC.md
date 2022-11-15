@@ -1217,6 +1217,7 @@ Finalmente, cabe um pequeno comentário quanto às capas dos Módulos deste guia
 [*labakiturbo@gmail.com*](mailto:labakiturbo@gmail.com)
 
 [*http://labaki.tk*](http://labaki.tk/)
+
 ![](./Imagens/img-40.jpg)
 
 **Este documento pode ser distribuído livremente, desde que mantidos os créditos do autor.**
