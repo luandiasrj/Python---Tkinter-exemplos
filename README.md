@@ -38,4 +38,4 @@ Sem esse material, esse repositório não existiria e muitos estudantes de compu
 - [ ] Adicionar todos exemplos nos módulos A e B.
 - [ ] Atualizar todos os exemplos para Python 3.
 - [ ] Atualizar disquete para pendrive.
-- [ ] Adicionar realizar os desafios propostos no material original.
+- [ ] Realizar e adicionar os desafios propostos no material original.
