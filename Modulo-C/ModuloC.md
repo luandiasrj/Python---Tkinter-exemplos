@@ -6,8 +6,9 @@
 
 **Tkinter!**
 
-**Josué Labaki
-labakiturbo@gmail.com**
+**Josué Labaki**
+
+**labakiturbo@gmail.com**
 
 ![](./Imagens/image2.png)
 
@@ -24,9 +25,13 @@ Recomendamos que você acompanhe e implemente os exemplos, tente entender os err
 Mande suas dúvidas, sugestões, críticas ou comentários por e-mail! Sua opinião sobre o guia é muito importante para nós.
 
 ***Josué Labaki***
+
 Grupo Python
+
 Departamento de Engenharia Mecânica
+
 UNESP – Campus de Ilha Solteira
+
 [***labakiturbo@gmail.com***](mailto:labakiturbo@gmail.com)
 
 [========]
@@ -1208,7 +1213,9 @@ E não poderia deixar de agradecer meu novo parceiro na produção de documenta�
 Finalmente, cabe um pequeno comentário quanto às capas dos Módulos deste guia. No primeiro, o *Hulk* representa a programação procedural como um herói poderosíssimo, mas com desvios de humor e comportamentos às vezes imprevisíveis. O *Batman* do Módulo B alude à Orientação a Objetos como um poder igual ao do Hulk, mas desta vez racional, capaz de trabalhar em conjunto e com um cinto de utilidades. Por fim, a *Super-Moça* que fecha a série, representando Tkinter, possui o poder e a inteligência dos anteriores, mas é muito mais bonita, simpática e charmosa que aquele morcego feioso e o monstrengo verde.
 
 ***J. Labaki***
+
 [*labakiturbo@gmail.com*](mailto:labakiturbo@gmail.com)
+
 [*http://labaki.tk*](http://labaki.tk/)
 ![](./Imagens/img-40.jpg)
 

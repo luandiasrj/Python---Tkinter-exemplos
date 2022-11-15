@@ -4,6 +4,7 @@
 ![**BEM-VINDO AO PYTHON**](./Imagens/img-1_.png)
 
 **Josué Labaki**
+
 [**labaki**___turbo___**@gmail.com.**](mailto:labakiturbo@gmail.com)
 
 ![](../Modulo-C/Imagens/image2.png)
@@ -22,8 +23,12 @@ Mande suas dúvidas, sugestões, críticas ou comentários por e-mail! Sua opini
 
 ***Josué Labaki***
 
-Grupo Python Departamento de Engenharia Mecânica
+Grupo Python
+
+Departamento de Engenharia Mecânica
+
 UNESP – Campus de Ilha Solteira
+
 [***labakiturbo@gmail.com***](mailto:labakiturbo@gmail.com)
 
 [========]
@@ -321,9 +326,8 @@ O operador “+” também representa concatenação em listas. A seguir estamos
 [1, 2, 3, 4]
 
 >>> lista+4
-
 Traceback (most recent call last):
-File "<pyshell#1>", line 1, in -toplevel- lista+4
+    File "<pyshell#1>", line 1, in -toplevel- lista+4
 TypeError: can only concatenate list (not "int") to list
 
 >>> lista=lista+[0,0,0]
@@ -460,7 +464,7 @@ Dicionários também são contêineres, mas não são seqüências porque não s
 >>> aurelio={'denomiação':'ilha solteira','população':23000,'renda':1500}
 
 >>> aurelio
-{'popula\xe7\xe3o':	23000,	'denomia\xe7\xe3o':	'ilha	solteira', 'renda':1500}
+{'popula\xe7\xe3o': 23000, 'denomia\xe7\xe3o': 'ilha solteira', 'renda':1500}
 ```
 
 Neste exemplo, temos o inteiro 23000 atribuído à chave “população”. Para adicionar novos valores a outras chaves, fazemos
@@ -473,7 +477,7 @@ atribuindo assim a string “turismo” à nova chave “vocação”.
 
 ```Python
 >>> aurelio
-{'popula\xe7\xe3o':	23000,	'voca\xe7\xe3o':	'turismo', 'denomia\xe7\xe3o': 'ilha solteira', 'renda': 1500}
+{'popula\xe7\xe3o': 23000, 'voca\xe7\xe3o': 'turismo', 'denomia\xe7\xe3o': 'ilha solteira', 'renda': 1500}
 ```
 
 E para requisitar o valor atribuído a alguma chave,
@@ -666,7 +670,7 @@ Já o método *count* retorna o número de vezes que seu argumento aparece na li
 Já vimos que a varredura ao contrário, por meio de incremento negativo, poderia ser aplicada a qualquer seqüência, não somente a strings. Vamos aproveitar que estamos falando de manipulação de listas para verificar isso. Veja como é fácil obter a Escala de Dureza de Mohs em ordem decrescente de dureza:
 
 ```Python
->>>	Mohs=['Talco',	'Gipsita',	'Calcita',	'Fluorita',	'Apatita', 'Ortoclásio', 'Quartzo', 'Topázio', 'Coríndon', 'Diamante']
+>>> Mohs=['Talco', 'Gipsita', 'Calcita', 'Fluorita', 'Apatita', 'Ortoclásio', 'Quartzo', 'Topázio', 'Coríndon', 'Diamante']
 
 >>> Mohs[::-1]
 ['Diamante', 'Cor\xedndon', 'Top\xe1zio', 'Quartzo', 'Ortocl\xe1sio', 'Apatita', 'Fluorita', 'Calcita', 'Gipsita', 'Talco']
@@ -1047,6 +1051,7 @@ Digite um valor: -4.99
 ```
 
 A sintaxe de try é:
+
 **try:**
 
     primeiro tenta fazer isso
@@ -1444,7 +1449,7 @@ Da mesma forma, o que acontece aqui é:
 |Primeiro Passo|4|3|4\*\*3|64|
 |Segundo Passo|64|2|64\*\*2|4096|
 |Terceiro Passo|4096|1|4096\*\*1|4096|
-|Resultado|||| 4096|
+|Resultado|4096|4096|4096|4096|
 
 Um recurso de trabalho com funções e seqüências muito característico de Python são as *list comprehensions*, que permitem gerar uma lista a partir de funções simples.
 
@@ -2496,8 +2501,12 @@ if int(raw_input('Velocidade: '))==1:
 else:
     vel=1
 texto=raw_input('Texto a ser traduzido (minúsculas, sem acentos): ')
-morse = {'m': '--', ',': '--..--', '.': '.-.-.-', '1': '.----', '0': '-----', '3': '...--', '2': '..---', '5': '.....', '4': '....-', '7': '--...', '6': '-....', '9': '----.', '8': '---..', '?': '..--..', 'a': '.-', 'c': '-.-.', 'b': '-...', 'e': '.', 'd': '-..',
-         'g': '--.', 'f': '..-.', 'i': '..', 'h': '....', 'k': '-.-', 'j': '.---', 'l': '.-..', 'o': '---', 'n': '-.', 'q': '--.-', 'p': '.--.', 's': '...', 'r': '.-.', 'u': '..-', 't': '-', 'w': '.--', 'v': '...-', 'y': '-.--', 'x': '-..-', 'z': '--..', '': '\n'}
+morse = {'m': '--', ',': '--..--', '.': '.-.-.-', '1': '.----', '0': '-----', '3':'...--',
+        '2': '..---', '5': '.....', '4': '....-','7': '--...', '6': '-....', '9': '----.',
+        '8': '---..', '?': '..--..', 'a': '.-', 'c': '-.-.', 'b': '-...', 'e': '.', 'd': '-..',
+        'g': '--.', 'f': '..-.', 'i': '..', 'h': '....', 'k': '-.-', 'j': '.---', 'l': '.-..',
+        'o': '---','n': '-.', 'q': '--.-', 'p': '.--.', 's': '...', 'r': '.-.', 'u': '..-', 't': '-',
+        'w': '.--', 'v': '...-', 'y': '-.--', 'x': '-..-', 'z': '--..', '': '\n'}
 for i in texto:
     print i,morse[i]
     for j in range(len(morse[i])):
@@ -2647,12 +2656,19 @@ Após executar o programa, no AutoCAD vá a **Tools > Run** Script e execute *gr
 Este programa sorteia um número entre 0 e 9. O usuário tem que informar todos os números que o programa escolheu até o momento, sem errar nenhum da seqüência. Um jogo-exemplo:
 
 Programa: 0
+
 Jogador: 0
+
 Programa: 4
+
 Jogador: 04
+
 Programa: 7
+
 Jogador: 047
+
 Programa: 3
+
 Jogador: 0453 – **Errou!**
 
 ```Python
@@ -2756,7 +2772,9 @@ Nos vemos no Módulo B!
 ![](./Imagens/img-13.jpg)
 
 ***J. Labaki***
+
 [***labaki***__turbo@__***gmail.com.***](mailto:labakiturbo@gmail.com)
+
 ***[http://labaki.tk](http://labaki.tk/)***
 
 **Este documento pode ser distribuído livremente, desde que mantidos os créditos do autor.**

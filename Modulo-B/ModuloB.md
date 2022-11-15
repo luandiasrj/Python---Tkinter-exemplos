@@ -6,13 +6,13 @@
 
 ![**Python Orientado a Objetos**](./Imagens/img-4_.png)
 
-**Josué Labaki    <labakiturbo@gmail.com> E. R. Woiski    <woiski@dem.feis.unesp.br>**
+**Josué Labaki <labakiturbo@gmail.com> E. R. Woiski    <woiski@dem.feis.unesp.br>**
 
 ![](../Modulo-C/Imagens/image2.png)
 
 # Apresentação
 
-Este material foi desenvolvido para apoiar os cursos da série **“Introdução a Python”** ministrados pelo **Grupo Python** para nossos mais diversos tipos de audiência. O guia inteiro é composto por três volumes que correspondem aos módulos dados nos nossos cursos: Módulo A –* Bem-vindo a Python!*, Módulo B – *Python Orientado a Objetos* e Módulo C – *Tkinter*. Todos eles podem ser encontrados na internet, nas páginas do Grupo Python (http://grupopython.cjb.net), na página do autor (http://labaki.tk) e na página da comunidade Python no Brasil (http://www.python-brasil.com.br).
+Este material foi desenvolvido para apoiar os cursos da série **“Introdução a Python”** ministrados pelo **Grupo Python** para nossos mais diversos tipos de audiência. O guia inteiro é composto por três volumes que correspondem aos módulos dados nos nossos cursos: Módulo A – *Bem-vindo a Python!*, Módulo B – *Python Orientado a Objetos* e Módulo C – *Tkinter*. Todos eles podem ser encontrados na internet, nas páginas do Grupo Python (http://grupopython.cjb.net), na página do autor (http://labaki.tk) e na página da comunidade Python no Brasil (http://www.python-brasil.com.br).
 
 Desenvolvemos este guia pensando também nos autodidatas que não participaram dos nossos cursos e baixaram este material da internet. Se você está nesta situação, pode tirar dúvidas por e-mail.
 
@@ -24,9 +24,13 @@ Mande suas dúvidas, sugestões, críticas ou comentários por e-mail! Sua opini
 
 ***Josué Labaki & Emanuel R. Woiski***
 Grupo Python
+
 Departamento de Engenharia Mecânica
+
 UNESP – Campus de Ilha Solteira
+
 [***labakiturbo@gmail.com***](mailto:labakiturbo@gmail.com)
+
 [***woiski@dem.feis.unesp.br***](mailto:woiski@dem.feis.unesp.br)
 
 [========]
@@ -72,8 +76,10 @@ Na programação imperativa, o usuário manipula os dados através de uma seqü�
 Digamos que você tenha que desenvolver um código que faça a alimentação em um zoológico. Seu algoritmo *procedural* fica assim:
 
 > **Procedimento 1:** comprar uma banana;
-**Procedimento 2:** aguardar meio-dia;
-**Procedimento 3:** servir a banana.
+>
+>**Procedimento 2:** aguardar meio-dia;
+>
+>**Procedimento 3:** servir a banana.
 
 Se suas variáveis são macacos, ótimo. Macacos comem bananas e ao meio- dia. No entanto, este código não vale para todas as variáveis do zoológico, já que elefantes não se contentam com somente uma banana, leões não comem bananas, corujas não comem ao meio-dia, etc.
 
@@ -105,7 +111,6 @@ O código acima está dizendo: *b* aplica sobre si seu método sqrt e retorna o 
 >>> a='araraquara'
 
 >>> a.split('a')
-
 ['', 'r', 'r', 'qu', 'r', '']
 ```
 
@@ -116,7 +121,6 @@ Através de uma das nossas mais poderosas ferramentas de introspecção em Pytho
 
 ```Python
 >>> dir(a)
-
 ['__add__','__class__','__contains__','__delattr__','__doc__','__eq__', '__ge__', '__getattribute__','__getitem__', '__getnewargs__','__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__','__lt__','__mod__','__mul__','__ne__','__new__','__reduce__','__reduce_ex__','__repr__','__rmod__','__rmul__','__setattr__','__str__','capitalize','center','count','decode','encode','endswith','expandtabs','find','index','isalnum','isalpha','isdigit', 'islower','isspace', 'istitle', 'isupper', 'join', 'ljust','lower', 'lstrip', 'replace', 'rfind', 'rindex', 'rjust', 'rstrip','split','splitlines','startswith','strip','swapcase','title','translate', 'upper', 'zfill']
 ```
 
@@ -153,7 +157,6 @@ Pronto, basta isso e está criada a classe dos Cachorros! Veja:
     
 ```Python
 >>> Cachorros
-
 <class __main__.Cachorros at 0x00B04360>
 ```
 
@@ -175,7 +178,8 @@ Você já sabe que os objetos instâncias são definidos a partir de suas classe
 Entretanto:
 
 ```Python   
->>> id(Cachorros()) == id(Cachorros()) False
+>>> id(Cachorros()) == id(Cachorros())
+False
 ```
 
 A função *id(obj1)* retorna um inteiro particular (hexadecimal) que identifica o *obj1* e permite compará-lo com outros objetos. Usamos esta função acima sobre duas instanciações da classe Cachorros para que você perceba que cada vez que usamos a expressão *Nome_da_classe(parâmetros)* invocamos uma ***nova*** instância. Sabemos ainda que, em nosso caso as instâncias criadas são gêmeas idênticas umas às outras, pois, embora sejam **distintas**, não há como distingui-las... Em Python, para que possamos fazer referência a uma dada instância criada, atribuímos a instância a um nome (*uma variável*), no momento de sua criação. Veja um exemplo deste tipo de atribuição, no qual o nome *d* aponta para uma instância da classe Cachorros.
@@ -194,7 +198,6 @@ Dissemos anteriormente que classes são objetos de primeira classe, e por isso p
 <class __main__.Cachorros at 0x00B04360> # O mesmo id de Cachorros!
 
 >>> Dogs.__name__
-
 'Cachorros'
 ```
 
@@ -204,24 +207,17 @@ O atributo interno *`__name__`* , se existir, retorna o nome do objeto sobre o q
 
 ```Python
 >>> def nome_do_objeto(c): Você sabe dizer qual é o tipo de c?
-
     try:
-
         print 'Nome do objeto: %s. Id: %d.' % (c.__name__, id(c))
-
-    except:
-        
+    except:        
         print """O objeto " %s " não tem atributo __name__ mas seu id é %d.""" % (str(c), id(c))
-
 
 >>> ndo=nome_do_objeto
 
 >>> ndo(Dogs)
-
 Nome do objeto: Cachorros. Id: 10756032.
 
 >>> ndo('abacaxi')
-
 O objeto " abacaxi " não tem atributo __name__ mas seu id é 10738400.
 ```
 
@@ -254,12 +250,10 @@ Atributos são objetos inerentes às classes, ou seja, comuns a todas as suas in
 
 
 >>> dir(Cachorros)
-
 ['__doc__', '__module__', 'alimento', 'cobertura', 'habitat', 'nome', 'patas']
 
 
 >>> dir(Galinhas)
-
 ['__doc__', '__module__', 'alimento', 'bico', 'cobertura', 'habitat', 'patas']
 ```
 Como vemos, as classes *Cachorros* e *Galinhas* possuem quatro atributos em comum: *cobertura, alimento, patas* e *habitat*. *Cachorros* possui ainda o atributo *nome* enquanto *Galinhas* possui o atributo *bico*, além de *`__doc__`* e *`__module__`* que ainda discutiremos. Vamos definir instâncias para elas e você vai começar a perceber que instâncias podem ser vistas como indivíduos de uma classe, possuindo os atributos de sua classe, etc.
@@ -279,8 +273,6 @@ Como vemos, as classes *Cachorros* e *Galinhas* possuem quatro atributos em comu
 'pequeno'
 
 >>> Snoopy.bico
-
-
 Traceback (most recent call last):
     File "<pyshell#28>", line 1, in -toplevel- Snoopy.bico
 AttributeError: Cachorros instance has no attribute 'bico'
@@ -292,7 +284,7 @@ Claro que os atributos podem ser usados em qualquer parte do programa:
 
 ```Python
 >>> print '%s late sem parar!' % Snoopy.nome
-    Rex late sem parar!
+Rex late sem parar!
 ```
 
 Ué! O nome não era Snoopy? Fique atento para distinguir o nome (ou variável)  atribuído  à  instância  –  Snoopy  -  e  o  atributo  de  classe  *'nome'*,  que  é  “Rex”! Para  verificar  que  `nome'  é  mesmo  um  atributo  da  classe  *Cachorros*,  você  pode  dar uma olhada na definição da classe, ou simplesmente requisitar:
@@ -305,12 +297,9 @@ Métodos são funções definidas dentro da classe e, em geral, ligadas (bound) 
 
 ```Python
 >>> class Circulos:
-
         raio = 25.4
-
         def calcula_Area(self):
             self.area = 3.14*(self.raio**2)
-        
         def calcula_Volume(self,altura):            
             self.volume = 3.14*(self.raio**2)*altura
 ```
@@ -324,13 +313,11 @@ A seguir, atribuímos uma instância da classe Circulos ao nome C1. Inicialmente
     25.399999999999999
 
 >>> C1.area
-
     Traceback (most recent call last):
         File "<pyshell#44>", line 1, in -toplevel- C1.area
     AttributeError: Circulos instance has no attribute 'area'
 
 >>> dir(C1)
-
 ['__doc__', '__module__', 'calcula_Area', 'calcula_Volume', 'raio']
 
 
@@ -340,7 +327,6 @@ A seguir, atribuímos uma instância da classe Circulos ao nome C1. Inicialmente
     2025.8024
 
 >>> dir(C1)
-
 ['__doc__', '__module__', 'area', 'calcula_Area', 'calcula_Volume', 'raio']
 ```
 
@@ -363,8 +349,6 @@ Há ainda outro método na classe *Circulos, calcula_Volume*, que além do *self
 >>> C1 = Circulos()
 
 >>> C1.calcula_Volume()
-
-
 Traceback (most recent call last):
     File "<pyshell#19>", line 1, in -toplevel- C1.calcula_Volume()
 TypeError: calcula_Volume() takes exactly 2 arguments (1 given)
@@ -393,20 +377,18 @@ Na definição das classes veremos que é muito comum encontrarmos um método es
         alimento='carne'
         patas=4
         habitat='domestico'
-
         def __init__ (self, nome):	# Jamais nos esqueceremos do self!
             self.nome= nome
-
 
 >>> d1 = Cachorros('Dog1')
 
 >>> d1.nome
-    'Dog1'
+'Dog1'
 ```
 
 Como vemos, os valores para os argumentos dentro do `__init__` deverão ser fornecidos no momento exato da criação de cada instância. Nem sempre precisaremos fornecer valores para todos os argumentos, como veremos adiante com o uso de valores *default*.
 
-Para tornar as coisas interessantes, vamos supor que temos a necessidade de manipular uma infinidade de objetos “na tela”, de forma a que cada um deles tenha um nome, um tamanho, uma cor, um número de arestas. Por outro lado, a posição mutável (x,y) de cada um será dada por um número real aleatório dentro de um quadrado de 10x10. Para gerarmos a posição aleatória, usaremos o módulo *random*. No Módulo A já vimos que a função *random* deste módulo gera um float x aleatório tal que 0 £ x £ 1. Um dos códigos possíveis está mostrado na página seguinte.
+Para tornar as coisas interessantes, vamos supor que temos a necessidade de manipular uma infinidade de objetos “na tela”, de forma a que cada um deles tenha um nome, um tamanho, uma cor, um número de arestas. Por outro lado, a posição mutável (x,y) de cada um será dada por um número real aleatório dentro de um quadrado de 10x10. Para gerarmos a posição aleatória, usaremos o módulo *random*. No Módulo A já vimos que a função *random* deste módulo gera um float x aleatório tal que 0 ≤ x ≤ 1. Um dos códigos possíveis está mostrado na página seguinte.
 
 ```Python
 >>> from random import random
@@ -433,12 +415,12 @@ Na criação da primeira instância, usamos o argumento aresta como *default*, o
 >>> s1 = Sprites('Star1', 'pequeno', 'vermelho')
 
 >>> s1.nome, s1.tamanho, s1.cor, s1.arestas
-    ('Star1', 'pequeno', 'vermelho', 5)
+('Star1', 'pequeno', 'vermelho', 5)
 
 >>> s2 = Sprites('Star2', arestas=6, cor='azul')
 
 >>> s2.nome, s2.tamanho, s2.cor, s2.arestas
-    ('Star2', 'grande', 'azul', 6)
+('Star2', 'grande', 'azul', 6)
 
 >>> s1.update_position(), s2.update_position()
 Star1 está agora em (0.43251725889582815, 9.5024820736664353).
@@ -448,10 +430,10 @@ Star2 está agora em (0.50694145748064412, 1.6160935722866276).
 (None, None)
 
 >>> s1.position
-    (0.43251725889582815, 9.5024820736664353)
+(0.43251725889582815, 9.5024820736664353)
 
 >>> s2.position
-    (0.50694145748064412, 1.6160935722866276)
+(0.50694145748064412, 1.6160935722866276)
 ```
 
 Você viu que após a aplicação do método *update_position* sobre uma instância, passará a existir – ser atualizado - o atributo *position daquela* instância, que é distinto para cada uma das instâncias *s1* e *s2*. Os indivíduos dessa classe compartilham os atributos definidos normalmente dentro da classe, mas não os atributos definidos pelo método *`__init__`* .
@@ -464,26 +446,21 @@ Anteriormente, pudemos perceber que qualquer classe possui nativamente dois atri
 
 ```Python
 >>> class Fausto:
-
 """Fausto é um romance de Goethe que Beethoven transformou em Ópera."""
-
         def review(self):
-            
             """
             Este método responde com a avaliação dos críticos
             """
-            
             print 'Um romance excepcional'
 
-
 >>> print Fausto.__doc__
-    Fausto é um romance de Goethe que Beethoven transformou em Ópera.
+Fausto é um romance de Goethe que Beethoven transformou em Ópera.
 
 >>> print Fausto().__doc__
-    Fausto é um romance de Goethe que Beethoven transformou em Ópera.
+Fausto é um romance de Goethe que Beethoven transformou em Ópera.
 
 >>> print Fausto().review.__doc__
-    Este método responde com a avaliação dos críticos
+Este método responde com a avaliação dos críticos
 ```
 
 Além da função *dir*, o Módulo A já havia nos apresentado a outra importante ferramenta de introspecção, a função *help*. Observe como ela se torna especialmente útil na introspecção de classes. Todos os métodos são exibidos de uma vez só, juntamente com suas respectivas *docstrings*. Pela primeira linha exibida pela função help, descobrimos a qual módulo a classe pertence. Como aqui estamos usando o IDLE, o “módulo” é *`__main__`*.
@@ -523,12 +500,12 @@ Falando em `__main__`, o atributo especial `__module__` guarda o nome do módulo
 >>> sav = So_Acredito_Vendo()
 
 >>> sav.__module__
-    '__main__'
+'__main__'
 
 >>> from math import sin
 
 >>> sin.__module__
-    'math'
+'math'
 ```
 
 # Parte III — Herança
@@ -576,13 +553,13 @@ Mão na massa! Criaremos três classes. Uma, chamada *Pai*, possui três atribut
         Nome = 'Maria'
 
 >>> Pai.Nome, Filha.Nome, Neta.Nome
-    ('Carlos', 'Luciana', 'Maria')
+('Carlos', 'Luciana', 'Maria')
 
 >>> Pai.Residência, Filha.Residência, Neta.Residência
-    ('Ilha Solteira', 'Ilha Solteira', 'Ilha Solteira')
+('Ilha Solteira', 'Ilha Solteira', 'Ilha Solteira')
 
 >>> Pai.Olhos, Filha.Olhos, Neta.Olhos
-    ('azuis', 'castanhos', 'castanhos')
+('azuis', 'castanhos', 'castanhos')
 ```
 
 Veja como o atributo *Nome* é distinto para *Pai, Filha* e *Neta*; a *Residência* de *Pai* foi herdada pelas suas subclasses *Filha e Neta*; esta, por sua vez herdou o atributo *Olhos* de sua superclasse imediata *Filha*.
@@ -591,10 +568,10 @@ Veja como o atributo *Nome* é distinto para *Pai, Filha* e *Neta*; a *Residênc
 
 ```Python
 >>> issubclass(Neta,Pai)
-    True
+True
 
 >>> Neta.__bases__
-    (<class main .Filha at 0x00A48030>,)
+(<class main .Filha at 0x00A48030>,)
 ```
 
 A seguir, você pode ver uma classe que herda de várias outras diretamente. Todas estas classes-base são retornadas pelo método *`__bases__`*.
@@ -616,17 +593,17 @@ A seguir, você pode ver uma classe que herda de várias outras diretamente. Tod
     Carater4 = 'e muito gelado!'
 
 
->>> print Artico.carater1 + Artico.carater2 + Artico.carater3 +\ Artico.carater4
-    É um oceano perigoso, cheio de tsunamis e muito gelado!
+>>> print Artico.carater1 + Artico.carater2 + Artico.carater3 + Artico.carater4
+É um oceano perigoso, cheio de tsunamis e muito gelado!
 
 >>> Indico.__bases__
-    ()
+()
 
 >>> Pacifico.__bases__
-    (<class __main__.Indico at 0x00A48060>,)
+(<class __main__.Indico at 0x00A48060>,)
 
 >>> Artico.__bases__
-    (<class __main__.Atlantico at 0x00A481E0>, <class __main__.Indico at
+(<class __main__.Atlantico at 0x00A481E0>, <class __main__.Indico at
 0x00A48060>, <class __main__.Pacifico at 0x00A48180>)
 ```
 
@@ -656,10 +633,10 @@ Veremos ainda o uso do método call para tornar uma instância *callable* (difí
 >>> b = Op_Basicas(-23)
 
 >>> a + b
-    33
+33
 
 >>> a * b
-    -1288
+-1288
 ```
 
 O conceito a ser notado destas últimas inocentes linhas é a sobrecarga de operadores. Fizemos com que o operador que antes só podia ser aplicado a inteiros, floats, strings, listas etc., agora possa ser aplicado sobre duas instâncias, retornando como resultado a soma dos seus atributos *self.valor*. Se estes atributos são strings, o valor retornado é sua concatenação:
@@ -670,14 +647,14 @@ O conceito a ser notado destas últimas inocentes linhas é a sobrecarga de oper
 >>> str2 = Op_basicas('-23')
 
 >>> str1 + str2
-    '56-23'
+'56-23'
 
 >>> str1 * str2
-    Traceback (most recent call last):
-        File "<pyshell#21>", line 1, in ? str1 * str2
-            File "<pyshell#15>", line 7, in __mul__
-                return self.valor * other.valor
-    TypeError: can't multiply sequence to non-int
+Traceback (most recent call last):
+    File "<pyshell#21>", line 1, in ? str1 * str2
+        File "<pyshell#15>", line 7, in __mul__
+            return self.valor * other.valor
+TypeError: can't multiply sequence to non-int
 ```
 
 Ops! Não definimos multiplicação de strings... Mas a multiplicação de inteiros por strings já é assumida pelo operador \*.
@@ -686,7 +663,7 @@ Ops! Não definimos multiplicação de strings... Mas a multiplicação de intei
 >>> str2 = Op_Basicas(34)
 
 >>> str1 * str2
-    '56565656565656565656565656565656565656565656565656565656565656565656'
+'56565656565656565656565656565656565656565656565656565656565656565656'
 ```
 
 Eis uma regra *fundamental* de Python. Se o objeto puder responder à mensagem com algum método, ele o fará, sem mais perguntas. Se ele não puder responder, seja porque ele não possui o método, seja porque o método ou os argumentos fornecidos são inadequados, um aviso de exceção será emitido. De fato, cabe ao programador a captura da exceção e a realização de alguma coisa útil com ela! Você está habilitado a fazer isso usando *try-except* que vimos e revimos mo Módulo A e mesmo neste.
@@ -708,16 +685,16 @@ Mas estamos falando de Herança. Seja a classe *Op_Avancadas* a ser definida com
 >>> c = Op_Avancadas(4)
 
 >>> c / a
-    0.071428571428571425
+0.071428571428571425
 
 >>> c / b
-    -0.17391304347826086
+-0.17391304347826086
 
 >>> c + a
-    60
+60
 
 >>> c * b
-    -92
+-92
 ```
 
 Veja que por causa da herança, a sobrecarga dos operadores de soma e multiplicação também estão disponíveis para as instâncias da classe *Op_Avancadas*.
@@ -731,20 +708,19 @@ Falando nisso, mesmo o método construtor pode *ser omitido*, se ele for exatame
         def quadrado(self):
             return self.valor * self.valor
 
-
 >>> d = Op_Extras(6)
 
 >>> d.quadrado()    
-    36
+36
 
 >>> d + a
-    62
+62
 
 >>> c + d
-    10
+10
 
 >>> d / b
-    -0.2608695652173913
+-0.2608695652173913
 ```
 
 Parece e *é* simples. Em virtude da herança, a instância recém-criada, *d*, já vem equipada  com os métodos	*`__add__`*, *`__mul__`*, e *`__div__`*, além do método construtor *`__init__`*. Aliás, exatamente por ter herdado o *`__init__`*, esta nova classe *Op_Extras* exige um argumento no ato da sua instanciação (aqui, usamos como argumento o inteiro 6).
@@ -753,16 +729,16 @@ São chamados *callable* em Python todos os objetos capazes de carregar um núme
 
 ```Python
 >>> callable(str1) # str1 é uma instância da classe Op_Basicas...
-    False
+False
 
 >>> callable(Op_Basicas)
-    True
+True
 
 >>> callable(d.quadrado)
-    True
+True
 
 >>> callable('abacaxi')
-    False
+False
 ```
 
 Por outro lado, embora tenhamos descoberto que instâncias não são normalmente *callable*, podemos fazê-las ter este comportamento, utilizando o método especial *`__call__`* na definição da sua classe. Vamos redefinir a classe *Op_Basicas* para que suas instâncias sejam *callable*:
@@ -784,23 +760,23 @@ Por outro lado, embora tenhamos descoberto que instâncias não são normalmente
 >>> a = Op_Basicas(56)
 
 >>> a('Vejam, eu sou uma instância callable')
-    Vejam, eu sou uma instância callable
+Vejam, eu sou uma instância callable
 
 >>> b = Op_Avancadas(-23)
 
 >>> b('Eu também sou!')
-    Eu também sou!
+Eu também sou!
 
 >>> d = Op_Extras(6)
 
 >>> d('E eu, então, não sou?')
-    E eu, então, não sou?
+E eu, então, não sou?
 
 >>> a(a.valor), a(b.valor), b(d.valor)
-    (56, -23, 6)
+(56, -23, 6)
 
 >>> callable(a), callable(b), callable(d)
-    (True, True, True)
+(True, True, True)
 ```
 
 Por último, aproveitamos que atributos de instância são objetos de primeira classe e passamos como argumento das instâncias. Como agora estas são chamáveis e retornam *qualquer coisa*, os atributos de instância são argumentos válidos.
@@ -827,26 +803,26 @@ Finalmente, o método especial *`__str__`* sobrecarrega a representação da ins
 >>> a = Op_Basicas(56)
 
 >>> print a
-    Sou uma orgulhosa instância de __main__.Op_Básicas
+Sou uma orgulhosa instância de __main__.Op_Básicas
 
 >>> a('Hello!')
-    'Hello!'
+'Hello!'
 
 >>> b = Op_Avancadas('abacaxi')
 
 >>> print b
-    Sou uma orgulhosa instância de __main__.Op_Avancadas
+Sou uma orgulhosa instância de __main__.Op_Avancadas
 
 >>> d = Op_Extras(6)
 
 >>> print d
-    Sou uma orgulhosa instância de __main__.Op_Extras
+Sou uma orgulhosa instância de __main__.Op_Extras
 
 >>> b(a.valor)
-    56
+56
 
 >>> d('And from me ' + str(b.valor))
-    'And from me -23'
+'And from me -23'
 ```
 
 Repare que as instâncias não deixam de ser *callable*, já que mantivemos o método *`__call__`*.
@@ -972,17 +948,17 @@ Ao longo de todo este (curto) módulo, foi possível observar alguns padrões na
 
 👍	Desenvolva uma classe para trabalhar com números complexos, na qual estejam definidos os métodos para realizar as quatro operações básicas com este conjunto numérico. Estas operações são:
 
-Adição: \((a + bi) + (c + di) = (a + c) + (b + d )i\)
+Adição: $(a + bi) + (c + di) = (a + c) + (b + d )i$
 
-Subtração: \((a + bi ) - (c + di) = (a - c) + (b - d )i\)
+Subtração: $(a + bi ) - (c + di) = (a - c) + (b - d )i\)
 
-Multiplicação: \((a + bi) . (c + di) = (ac - bd) + (ad + bc)i\) e
+Multiplicação: $(a + bi) . (c + di) = (ac - bd) + (ad + bc)i$ e
 
-Divisão: \(\frac{(a + bi)}{(c + di)} = \left(\frac{ac + bd}{c ^ 2 + d ^ 2}\right) + \left(\frac{bc - ad}{c ^ 2 + d ^ 2}\right)i\).
+Divisão: $\frac{(a + bi)}{(c + di)} = \left(\frac{ac + bd}{c ^ 2 + d ^ 2}\right) + \left(\frac{bc - ad}{c ^ 2 + d ^ 2}\right)i$.
 
 👉	Adicione mais um método à sua classe de números complexos para retornar ao usuário o número em questão na forma polar, isto é, passa-lo da forma **a+b*i*** para a forma **r ∠ θ**. Lembre-se de que:
 
-Raio: \(r = \sqrt{a ^ 2 + b ^ 2}\) e Ângulo: \(\theta = \arctan(\frac{a}{b})\). A classe terá que herdar os métodos de raiz quadrada e arco-tangente de outra classe nativa de Python. Qual você usaria?
+Raio: $r = \sqrt{a ^ 2 + b ^ 2}$ e Ângulo: $\theta = \arctan(\frac{a}{b})$. A classe terá que herdar os métodos de raiz quadrada e arco-tangente de outra classe nativa de Python. Qual você usaria?
 
 👉	Reescreva os exemplos do Módulo A usando Orientação a Objetos.
 
